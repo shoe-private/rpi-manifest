@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md -->
+<manifest>
+  <default remote="shoe-private" revision="refs/heads/master" path="./" />
+
+  <remote name="yocto" fetch="git://git.yoctoproject.org" />
+  <remote name="oe" fetch="git://git.openembedded.org" />
+  <remote name="shoe-private" fetch="git://github.com/shoe-private" />
+
+  <project name="poky" revision="refs/heads/gatesgarth" remote="yocto" />
+  <project name="meta-raspberrypi" revision="refs/heads/gatesgarth" remote="yocto" />
+  <project name="meta-selinux" revision="refs/heads/gatesgarth"  remote="yocto" />
+  <project name="meta-security" revision="refs/heads/gatesgarth"  remote="yocto" />
+  <project name="meta-virtualization" revision="refs/heads/gatesgarth" remote="yocto" />
+
+  <project name="meta-openembedded" revision="refs/heads/gatesgarth"  remote="oe" />
+  
+  <!-- manifest and confs -->
+  <project name="rpi-manifest" revision="refs/heads/master" remote="shoe-private">
+    <linkfile dest="conf" src="conf"/>
+  </project>
+
+</manifest>
