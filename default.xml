@@ -18,6 +18,7 @@
   <!-- manifest and confs -->
   <project name="rpi-manifest" revision="refs/heads/master" remote="shoe-private">
     <linkfile dest="conf" src="conf"/>
+    <linkfile dest="meta-rpi-podman" src="meta-rpi-podman"/>
   </project>
 
 </manifest>
